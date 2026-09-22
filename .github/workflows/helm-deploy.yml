@@ -8,7 +8,6 @@ on:
 
 jobs:
   helm-deploy:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,11 +19,11 @@ jobs:
 
       - name: Lint Helm chart
         run: |
-          helm lint ./cicd-app
+          helm lint ./Lab-07-CICD-with-Helm-Deploy/cicd-app
 
       - name: Render Helm templates
         run: |
-          helm template cicd-release ./cicd-app
+          helm template cicd-release ./Lab-07-CICD-with-Helm-Deploy/cicd-app
 
       - name: Helm deployment
         run: |
